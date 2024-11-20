@@ -2,13 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Firpriya is a btichWebsite</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Startup Website Builders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #555;
+            padding: 0.5rem 0;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            height: 400px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        .services, .testimonials {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .card {
+            background: #f4f4f4;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+        form button {
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #555;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is my first webpriya is a bitch on GitHub Pages!</p>
+    <header>
+        <h1>Startup Website Builders</h1>
+        <p>Professional, Affordable, and Beautiful Websites</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h1>Bring Your Ideas to Life</h1>
+    </div>
+    <section id="services" class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Custom Websites</h3>
+                <p>Fully tailored solutions to match your business needs.</p>
+            </div>
+            <div class="card">
+                <h3>eCommerce Platforms</h3>
+                <p>Set up your online store and start selling today!</p>
+            </div>
+            <div class="card">
+                <h3>SEO Optimization</h3>
+                <p>Increase your visibility and rank higher on search engines.</p>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials">
+            <div class="card">
+                <p>"They created a stunning website for my business! Highly recommend."</p>
+                <p>- Jane Doe</p>
+            </div>
+            <div class="card">
+                <p>"Fast, affordable, and reliable. My go-to website experts."</p>
+                <p>- John Smith</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Startup Website Builders. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
