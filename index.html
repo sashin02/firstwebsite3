@@ -5,22 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startup Website Builders</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes heroGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
+
         header {
             background: #333;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            animation: fadeIn 1s ease-out;
         }
+
         nav {
             background: #555;
             padding: 0.5rem 0;
+            animation: slideIn 0.8s ease-out;
         }
+
         nav ul {
             display: flex;
             list-style: none;
@@ -28,62 +56,116 @@
             padding: 0;
             margin: 0;
         }
+
         nav ul li {
             margin: 0 1rem;
+            transition: transform 0.3s ease;
         }
+
+        nav ul li:hover {
+            transform: scale(1.1);
+        }
+
         nav ul li a {
             color: #fff;
             text-decoration: none;
         }
+
         .hero {
-            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            background: linear-gradient(45deg, #3494E6, #EC6EAD, #3494E6);
+            background-size: 400% 400%;
             height: 400px;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            animation: 
+                heroGlow 15s ease infinite,
+                fadeIn 1.5s ease-out;
         }
+
         .hero h1 {
             font-size: 3rem;
             background: rgba(0, 0, 0, 0.5);
             padding: 1rem;
+            animation: pulse 3s infinite;
         }
+
         .container {
             width: 90%;
             margin: 0 auto;
             padding: 2rem 0;
         }
+
         .services, .testimonials {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
         }
+
         .card {
             background: #f4f4f4;
             padding: 1rem;
             border: 1px solid #ddd;
             border-radius: 5px;
             text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease-out;
         }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
         footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 1rem 0;
+            animation: slideIn 1s ease-out;
         }
+
         form input, form textarea, form button {
             width: 100%;
             margin-bottom: 1rem;
             padding: 0.5rem;
             font-size: 1rem;
+            transition: all 0.3s ease;
         }
+
+        form input:focus, 
+        form textarea:focus {
+            outline: none;
+            border-color: #3494E6;
+            box-shadow: 0 0 10px rgba(52, 148, 230, 0.5);
+        }
+
         form button {
             background: #333;
             color: #fff;
             border: none;
             cursor: pointer;
+            position: relative;
+            overflow: hidden;
         }
+
+        form button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.5s;
+        }
+
+        form button:hover:before {
+            left: 100%;
+        }
+
         form button:hover {
             background: #555;
         }
